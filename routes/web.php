@@ -19,6 +19,7 @@ Route::get('/','BlogController@index');
 // });
 
 Route::get('/isi-post/{slug}', 'BlogController@isi_blog')->name('blog.isi');
+Route::get('/list-post', 'BlogController@list_blog')->name('blog.list');
 
 
 Route::group(['middleware' => 'auth'], function(){
