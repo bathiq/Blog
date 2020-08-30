@@ -7,6 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+	<!-- META UNTUK GOOGLE MAX:100-140 -->
+	<meta name="description" content="">
+
+	<!-- META UNTUK FACEBOOK -->
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+
+	<!-- META UNTUK TWITTER -->
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:card" content="">
+
+
 	<title>Callie HTML Template</title>
 
 	<!-- Google font -->
@@ -51,8 +67,8 @@
 						<button class="aside-btn"><i class="fa fa-bars"></i></button>
 						<button class="search-btn"><i class="fa fa-search"></i></button>
 						<div id="nav-search">
-							<form>
-								<input class="input" name="search" placeholder="Enter your search...">
+							<form method="get" action="{{ route('blog.cari') }}">
+								<input class="input" name="cari" placeholder="Enter your search...">
 							</form>
 							<button class="nav-close search-close">
 								<span></span>
@@ -75,7 +91,7 @@
 							<div class="dropdown">
 								<div class="dropdown-body">
 									<ul class="dropdown-list">
-										@foreach($category as $data)
+										@foreach($category_widget as $data)
 										<li><a href="category.html">{{ $data-> name }}</a></li>
 										@endforeach
 									</ul>
